@@ -1,0 +1,53 @@
+[
+    {
+        "name": "Khorn Victor",
+        "title": "Software Engineer",
+        "image": "/images/victor.png",
+        "backgroundImage": "/backgrounds/victor.png",
+        "about": "Enthusiastic developer with a passion for creating innovative solutions and exploring new technologies.",
+        "posts": 1000,
+        "following": 201,
+        "followers": 4654656545
+    },
+    {
+        "name": "Jane Smith",
+        "title": "Product Manager",
+        "image": "/images/jane.png",
+        "backgroundImage": "/backgrounds/jane.png",
+        "about": "Experienced product manager with a knack for driving product vision and strategy.",
+        "posts": 45,
+        "following": 150,
+        "followers": 50000
+    },
+    {
+        "name": "Alice Johnson",
+        "title": "UX Designer",
+        "image": "/images/alice.png",
+        "backgroundImage": "/backgrounds/alice.png",
+        "about": "Creative UX designer focused on crafting user-centric designs that enhance user experience.",
+        "posts": 28,
+        "following": 300,
+        "followers": 75000
+    },
+    {
+        "name": "Bob Brown",
+        "title": "Data Scientist",
+        "image": "/images/bob.png",
+        "backgroundImage": "/backgrounds/bob.png",
+        "about": "Data scientist with expertise in machine learning and statistical analysis to drive business insights.",
+        "posts": 50,
+        "following": 400,
+        "followers": 120000
+    },
+    {
+        "name": "John Davis",
+        "title": "Marketing Specialist",
+        "image": "/images/john.png",
+        "backgroundImage": "/backgrounds/john.png",
+        "about": "Dynamic marketing specialist with a focus on digital marketing strategies and brand development.",
+        "posts": 22,
+        "following": 180,
+        "followers": 60000
+    }
+
+]

@@ -3,18 +3,19 @@ import { FaCheckCircle } from "react-icons/fa";
 import { FiEdit2 } from "react-icons/fi";
 import { FaPlus } from "react-icons/fa6";
 import { FiMessageSquare } from "react-icons/fi";
+import calculateStat from "./calculateStat";
 
 const ProfileCard = (props) => {
   return (
-    <div className="w-100 h-120 flex flex-col gap-0.5 bg-white rounded-2xl shadow-lg overflow-hidden p-2">
+    <div className="w-100 h-120 flex flex-col gap-0.5 bg-gray-100 rounded-2xl shadow-lg overflow-hidden p-2">
       {/* Cover Image */}
       <div
-        className={`h-1/3 mb-2 rounded-xl bg-cover shadow-md`}
+        className={`h-1/3 mb-2 rounded-xl bg-cover `}
         style={{ backgroundImage: `url(${props.backgroundImage})` }}
       ></div>
 
       {/* Profile Section */}
-      <div className="h-2/3 p-6 relative rounded-xl bg-gray-100">
+      <div className="h-2/3 p-6 relative rounded-xl bg-white shadow-sm flex flex-col">
         {/* Profile Avatar */}
         <img
           src={props.image || "https://i.pravatar.cc/150?img=3"}
@@ -58,37 +59,19 @@ const ProfileCard = (props) => {
           <div className="flex justify-between mt-5 border-t pt-4">
             <div className="text-center">
               <p className="text-xl font-bold">
-                {(props.posts < 1000
-                  ? props.posts
-                  : props.posts >= 1000000
-                  ? props.posts >= 1000000000
-                    ? (props.posts / 1000000000).toFixed(1) + "B"
-                    : (props.posts / 1000000).toFixed(1) + "M"
-                  : (props.posts / 1000).toFixed(1) + "k") || 34}
+                {calculateStat(props.posts) || 34}
               </p>
               <p className="text-gray-500 text-sm">Post</p>
             </div>
             <div className="text-center">
               <p className="text-xl font-bold">
-                {(props.following < 1000
-                  ? props.following
-                  : props.following >= 1000000
-                  ? props.following >= 1000000000
-                    ? (props.following / 1000000000).toFixed(1) + "B"
-                    : (props.following / 1000000).toFixed(1) + "M"
-                  : (props.following / 1000).toFixed(1) + "k") || 201}
+                {calculateStat(props.following) || 201}
               </p>
               <p className="text-gray-500 text-sm">Following</p>
             </div>
             <div className="text-center">
               <p className="text-xl font-bold">
-                {(props.followers < 1000
-                  ? props.followers
-                  : props.followers >= 1000000
-                  ? props.followers >= 1000000000
-                    ? (props.followers / 1000000000).toFixed(1) + "B"
-                    : (props.followers / 1000000).toFixed(1) + "M"
-                  : (props.followers / 1000).toFixed(1) + "k") || 300 + "k"}
+                {calculateStat(props.followers) || 300 + "k"}
               </p>
               <p className="text-gray-500 text-sm">Followers</p>
             </div>
